@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e57ec307ad1d4cd481b62c0e86551e0
+guid: c17e0a9340c634807ae6a33a13e729d6
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -319,7 +319,8 @@ ModelImporter:
     4300010: EYE_DEF
     4300012: EL_DEF
     4300014: BLW_DEF
-    7400000: Take 001
+    7400000: WAIT04
+    7400002: WAIT04a
     9500000: //RootNode
     11100000: //RootNode
     13700000: BLW_DEF
@@ -341,7 +342,33 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WAIT04
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 156
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

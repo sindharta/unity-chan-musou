@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58f946704b3f545bc8fa8d1133bcd821
+guid: 72c3008d306e94c63851fa3b483e751d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -307,10 +307,18 @@ ModelImporter:
     2300002: eye_L_old
     2300004: eye_R_old
     2300006: head_back
+    2300008: BLW_DEF
+    2300010: EL_DEF
+    2300012: EYE_DEF
+    2300014: MTH_DEF
     3300000: eye_base_old
     3300002: eye_L_old
     3300004: eye_R_old
     3300006: head_back
+    3300008: BLW_DEF
+    3300010: EL_DEF
+    3300012: EYE_DEF
+    3300014: MTH_DEF
     4300000: head_back
     4300002: eye_base_old
     4300004: eye_L_old
@@ -319,7 +327,8 @@ ModelImporter:
     4300010: EYE_DEF
     4300012: EL_DEF
     4300014: BLW_DEF
-    7400000: Take 001
+    7400000: WAIT00
+    7400002: WAIT00a
     9500000: //RootNode
     11100000: //RootNode
     13700000: BLW_DEF
@@ -339,9 +348,35 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WAIT00
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
