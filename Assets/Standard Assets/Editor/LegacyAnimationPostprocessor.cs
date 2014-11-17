@@ -31,10 +31,6 @@ public class LegacyAnimationPostProcessor : AssetPostprocessor {
 		first_clip.firstFrame = 1;
 		
 		model_importer.clipAnimations = clips;
-		
-		
-		
-
 	}	
 	
 }

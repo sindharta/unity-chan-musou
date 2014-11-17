@@ -1119,6 +1119,8 @@ GameObject:
   - 4: {fileID: 311584159}
   - 136: {fileID: 311584160}
   - 111: {fileID: 311584161}
+  - 114: {fileID: 311584162}
+  - 114: {fileID: 311584163}
   m_Layer: 0
   m_Name: UnityChan
   m_TagString: Untagged
@@ -1166,13 +1168,44 @@ Animation:
   m_GameObject: {fileID: 311584158}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 72c3008d306e94c63851fa3b483e751d, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 72c3008d306e94c63851fa3b483e751d, type: 3}
+  m_Animation: {fileID: 0}
+  m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_CullingType: 1
+--- !u!114 &311584162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311584158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff449b2b7f6b42cbbc2a12828f41487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_waitAnimationClips:
+  - {fileID: 7400000, guid: 72c3008d306e94c63851fa3b483e751d, type: 3}
+  - {fileID: 7400000, guid: 6fb121205c07a4511acd1b5b4045e838, type: 3}
+  - {fileID: 7400004, guid: af1dace76495247d58140a7914d43e22, type: 3}
+  - {fileID: 7400000, guid: 366fa253b2c944e12999bca7ca4c3ec4, type: 3}
+  - {fileID: 7400000, guid: c17e0a9340c634807ae6a33a13e729d6, type: 3}
+  m_runAnimationClip: {fileID: 7400000, guid: 1e57ec307ad1d4cd481b62c0e86551e0, type: 3}
+  m_walkAnimationClip: {fileID: 7400000, guid: 58f946704b3f545bc8fa8d1133bcd821, type: 3}
+--- !u!114 &311584163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311584158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8147c99ece3f4e489d01ab3e4ab52ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_runSpeed: 3
+  m_walkSpeed: 1
 --- !u!1 &336351142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,7 +3280,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400106, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1058491650}
-  m_LocalRotation: {x: -.0937465355, y: .697855115, z: .707468987, w: .0608067401}
+  m_LocalRotation: {x: -.0937465429, y: .697855175, z: .707469046, w: .0608067177}
   m_LocalPosition: {x: -.0554340295, y: .00173068431, z: .0986537337}
   m_LocalScale: {x: 1.00000036, y: 1.0000006, z: 1.00000048}
   m_Children:
