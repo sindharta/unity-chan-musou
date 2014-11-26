@@ -18,6 +18,8 @@ public class MainSceneController : MonoBehaviour {
     [SerializeField]
     float m_spawnAreaHalfSize = 10.0f;
     
+    string m_deltaTimeInfo;    
+    
 //----------------------------------------------------------------------------------------------------------------------            
 
     float m_lastUpdateTime = 0;
@@ -41,33 +43,37 @@ public class MainSceneController : MonoBehaviour {
         if (Time.realtimeSinceStartup - m_lastUpdateTime < m_updateFrequency)
             return;
             
+        //We can still add more 
         if (Time.deltaTime <= m_idealDeltaTime)  {
             float x = Random.Range(-m_spawnAreaHalfSize, m_spawnAreaHalfSize);
             float z = Random.Range(-m_spawnAreaHalfSize, m_spawnAreaHalfSize);
 
             float y_rot = Random.Range(0f, 360.0f);            
             
-            GameObject obj = (GameObject) GameObject.Instantiate(
-                m_unityChanPrefab, 
-                new Vector3(x,0,z), 
-                Quaternion.Euler(0,y_rot,0)
-            );
-            obj.transform.parent = m_unityChanRoot;
+            Vector3 pos = new Vector3(x,0,z);
+            Quaternion rot = Quaternion.Euler(0,y_rot,0);
+            
+            GameObject obj = ObjectPoolManager.Spawn(m_unityChanPrefab, m_unityChanRoot, pos, rot);
+            
             m_unityChanObjects.Push(obj);
         } else {
+            //we have to decrease to maintain the ideal delta time
             if (m_unityChanObjects.Count > 0) {
-                GameObject obj = m_unityChanObjects.Pop();
-                Destroy(obj);
+                ObjectPoolManager.Recycle(m_unityChanObjects.Pop());
             }           
         }                     
             
+        m_deltaTimeInfo = string.Format("Delta Time: {0:0.##} ({1:00} FPS). Ideal: {2:0.##} ({3:00} FPS)", 
+                                               Time.deltaTime, 
+                                               1.0f / Time.deltaTime, 
+                                               m_idealDeltaTime, 
+                                               1.0f / m_idealDeltaTime);
         m_lastUpdateTime = Time.realtimeSinceStartup;
 	}
     
 //----------------------------------------------------------------------------------------------------------------------
     void OnGUI()  {
-
-        GUI.Label(new Rect(10, 10, 150, 20), "Delta Time: " + Time.deltaTime.ToString());
+        GUI.Label(new Rect(10, 10, 450, 20), m_deltaTimeInfo);
         GUI.Label(new Rect(10, 30, 150, 20), "Objects count: " + m_unityChanObjects.Count.ToString());
     }
     
